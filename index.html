@@ -5,6 +5,8 @@
 <head>
 <script src="jquery.min.js"></script>
 <script src="fabric.min.js"></script>
+<script src="jquery-1.10.2.min.js"></script>
+  <link href="Main.css" rel="stylesheet"/>
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -60,12 +62,24 @@
 					  </div><br>
 					  <button id="b" class="btn btn-info">Сохранить</button>
 					  <input type='file' class="btn btn-info" />
-					   			<br><br>
-					   			<audio id="myAudio" src="Peter_Rudenko.mp3" preload="auto"></audio>
-								<a onClick="togglePlay()" class="btn btn-info">Немного музыки для релакса</a>
 				</div>
 		</div>
-</div>
+</div> 
+        <div id="main" class="main"> 
+        	<img width="320" height="150" style="border:0px solid #aaa " class="semi">
+            <div id="player">
+                <div id="songTitle">Demo</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()"><img src="Pre.png" height="90%" width="90%"/></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="Pause.png"/></button>
+                    <button id="next" onclick="next()"><img src="Next.png" height="90%" width="90%"/></button>
+                </div>
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+            </div>
+        </div>
 <script src="picture.js"></script>
 <script src="audio.js"></script> 
 </body>

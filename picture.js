@@ -208,9 +208,6 @@ link.click();
 });
 
 function imageIsLoaded() { 
-  alert(this.src);  // blob url
-  // update width and height ...
-}
 
       let fileInput = document.getElementById('fileinput');
 
@@ -232,6 +229,5 @@ fileInput.addEventListener('change', function(ev) {
       }
     }
     reader.readAsDataURL(file);
-
   }
-});  
+}); } 
