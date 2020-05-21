@@ -15,7 +15,7 @@
       drawingShadowWidth = $('drawing-shadow-width'),
       drawingShadowOffset = $('drawing-shadow-offset'),
       clearEl = $('clear-canvas'),
-	  bb = $('b');
+	    bb = $('b');
 
   clearEl.onclick = function() { canvas.clear() };
 
@@ -178,6 +178,7 @@
       color: drawingShadowColorEl.value,
     });
   }
+
 
     bb.onclick = function(){
 

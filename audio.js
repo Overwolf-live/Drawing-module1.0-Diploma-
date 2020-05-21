@@ -1,4 +1,4 @@
- var songs = ["Relax.mp3","Song2.mp3","Song3.mp3"];
+ var songs = ["Ost1.mp3","Ost2.mp3","Ost3.mp3"];
         var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
         
