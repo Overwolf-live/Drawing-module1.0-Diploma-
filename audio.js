@@ -11,7 +11,6 @@
             song.src = songs[currentSong];  //set the source of 0th song 
             
             songTitle.textContent = songs[currentSong]; // set the title of song
-            song.play();
         }
         function playOrPauseSong(){
             

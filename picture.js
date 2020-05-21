@@ -201,33 +201,28 @@ link.click();
       if (this.files && this.files[0]) {
           var img = document.querySelector('img');  // $('img')[0]
           img.src = URL.createObjectURL(this.files[0]); // set src to blob url
-          img.onload = imageIsLoaded;
           
       }
   });
 });
 
-function imageIsLoaded() { 
+var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+var canvas = document.getElementById('c');
+var ctx = canvas.getContext('2d');
 
-      let fileInput = document.getElementById('fileinput');
 
-fileInput.addEventListener('change', function(ev) {
-    console.log(ev.target.files);
-  if(ev.target.files) {
-    let file = ev.target.files[0];
-    var reader  = new FileReader();
-
-    reader.onloadend = function (e) {
-      var image = new Image();
-      image.src = e.target.result;
-      image.onload = function(ev) {
-        var canvas = document.getElementById('canvas');
-        canvas.width = image.width;
-        canvas.height = image.height;
-         var ctx = canvas.getContext('2d');
-        ctx.drawImage(image,100,100);
-      }
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+            canvas.width = 500;
+            canvas.height = 350;
+            ctx.drawImage(img,500,350);
+        }
+        img.src = event.target.result;
     }
-    reader.readAsDataURL(file);
-  }
-}); } 
+    reader.readAsDataURL(e.target.files[0]);     
+}
+

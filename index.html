@@ -30,8 +30,17 @@
 					  <button id="drawing-mode" class="btn btn-info">Скрыть панель</button>
 					  <button id="clear-canvas" class="btn btn-info">Очистить холст</button><br> 
 					  
-
 					  <div id="drawing-mode-options">
+					  <label for="drawing-mode-selector">Фильтры:</label>
+						<select id="drawing-mode-selector">
+						  <option>Grayscale</option>
+						  <option>Blur</option>
+						  <option>Black and White</option>
+						  <option>Brightness</option>
+						  <option>Contrast</option>
+						  <option>Hue Rotation</option>
+						  <option>Invert</option></select><br>
+
 						<label for="drawing-mode-selector">Инструмент:</label>
 						<select id="drawing-mode-selector">
 						  <option>кисть</option>
@@ -45,11 +54,13 @@
 						  <option>ластик</option>
 						</select><br>
 
+
+
 						<label for="drawing-line-width">Толщина:</label>
 						<span class="info">30</span><input type="range" value="30" min="0" max="150" id="drawing-line-width"><br>
 
 						<label for="drawing-color">Цвет:</label>
-						<input type="color" value="#f3f3f3" id="drawing-color"><br>
+						<input type="color" value="#000000" id="drawing-color"><br>
 
 						<label for="drawing-shadow-color">Тень:</label>
 						<input type="color" value="#f3f3f3" id="drawing-shadow-color"><br>
@@ -61,12 +72,12 @@
 						<span class="info">0</span><input type="range" value="0" min="0" max="50" id="drawing-shadow-offset"><br>
 					  </div><br>
 					  <button id="b" class="btn btn-info">Сохранить</button>
-					  <input type='file' class="btn btn-info" />
+					  <input type="file" id="imageLoader" class="btn btn-info"/>
 				</div>
 		</div>
 </div> 
         <div id="main" class="main"> 
-        	<img width="320" height="150" style="border:0px solid #aaa " class="semi">
+        	<img width="320" height="150" style="border:0px solid #aaa" class="semi">
             <div id="player">
                 <div id="songTitle">Demo</div>
                 <div id="buttons">
